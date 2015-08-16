@@ -1,12 +1,24 @@
+import java.util.ArrayList;
+
 public class Teste {
 
     public static void main(String[] args) {
-        MyMath mm = new MyMath();
 
-        System.out.println(mm.fatorial(3));
-        System.out.println(mm.somatorio(-4));
-        System.out.println(mm.fibonacci(17));
-        System.out.println(mm.somatorioIntervalo(10,15));
+        System.out.println(MyMath.fatorial(3));
+        System.out.println(MyMath2.fatorial(3));
+        System.out.println(MyMath.somatorio(-4));
+        System.out.println(MyMath2.somatorio(-4));
+        System.out.println(MyMath.fibonacci(17));
+        System.out.println(MyMath2.fibonacci(17));
+        System.out.println(MyMath2.somatorioIntervalo(0, 10));
+        System.out.println(MyMath2.isPal("am ao"));
+
+        ArrayList<Integer> list = new ArrayList<>();
+        list.add(10);
+        list.add(20);
+        list.add(30);
+        list.add(40);
+        list.add(50);
 
     }
 
