@@ -88,7 +88,15 @@ public class MyMath2 {
      * @return número convertido em base binária
      */
     public static String convBase2(int n){
-    return "0";
+        return convBase2("", n);
+    }
+
+    public static String convBase2(String binario, int n){
+        if(n==0)return binario;
+        int res = n/2;
+        if(n%2==0)binario = 0+binario;
+        else binario = 1+binario;
+        return convBase2(binario, res);
     }
 
     /**

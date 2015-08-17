@@ -25,6 +25,8 @@ public class Teste {
 
         System.out.println(MyMath2.findBiggest(list));
 
+        System.out.println(MyMath2.convBase2(10));
+
     }
 
 }
