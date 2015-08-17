@@ -14,11 +14,16 @@ public class Teste {
         System.out.println(MyMath2.isPal("am ao"));
 
         ArrayList<Integer> list = new ArrayList<>();
+        System.out.println(list.size());
         list.add(10);
         list.add(20);
         list.add(30);
         list.add(40);
         list.add(50);
+        System.out.println(list.size());
+        System.out.println(MyMath2.somatorioArrayList(list));
+
+        System.out.println(MyMath2.findBiggest(list));
 
     }
 

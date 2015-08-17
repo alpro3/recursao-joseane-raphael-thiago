@@ -12,7 +12,7 @@ public class MyMath2 {
         if(n <= 1){
             return 1;
         } else {
-            return  n * fatorial(n -1 );
+            return  n * fatorial(n -1);
         }
     }
 
@@ -59,7 +59,7 @@ public class MyMath2 {
         } else if (k == j-1){
             return k + j;
         } else {
-            return k + somatorioIntervalo(k+1, j);
+            return k + somatorioIntervalo(k + 1, j);
         }
     }
 
@@ -97,11 +97,16 @@ public class MyMath2 {
      * @param list ArrayList de inteiros
      * @return soma dos inteiros do ArrayList
      */
-    public static int sumArrayList(ArrayList<Integer> list){
-        if (list.size() == 0){
+    public static int somatorioArrayList(ArrayList<Integer> list){
+        return somatorioArrayList(list,0);
+    }
+
+    public static int somatorioArrayList(ArrayList<Integer> list, int pos) {
+        if (pos + 1 > list.size()) {
             return 0;
+        } else {
+            return list.get(pos) + somatorioArrayList(list, pos + 1);
         }
-    return 0;
     }
 
     /**
@@ -110,7 +115,18 @@ public class MyMath2 {
      * @return maior elemento do ArrayList
      */
     public static int findBiggest(ArrayList<Integer> list){
-    return 0;
+        if(list == null) throw new NullPointerException("O ArrayList está null");
+        return findBiggest(list, list.get(0), 0);
+    }
+
+    public static int findBiggest(ArrayList<Integer> list, int n, int pos){
+        if(pos == list.size()){
+            return n;
+        }
+        if(list.get(pos) > n){
+            n = list.get(pos);
+        }
+        return findBiggest(list, n, pos+1);
     }
 
 }
