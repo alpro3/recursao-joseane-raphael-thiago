@@ -82,7 +82,7 @@ public class MyMath2 {
     }
 
     /**
-     * Implemente um método recursivo querecebe um inteiro
+     * Implemente um método recursivo que recebe um inteiro
      * e retorna uma String com o número em binário.
      * @param n número inteiro
      * @return número convertido em base binária
@@ -92,10 +92,15 @@ public class MyMath2 {
     }
 
     public static String convBase2(String binario, int n){
-        if(n==0)return binario;
+        if(n == 0){
+            return binario;
+        }
         int res = n/2;
-        if(n%2==0)binario = 0+binario;
-        else binario = 1+binario;
+        if(n % 2 == 0){
+            binario = 0 + binario;
+        } else {
+            binario = 1 + binario;
+        }
         return convBase2(binario, res);
     }
 
