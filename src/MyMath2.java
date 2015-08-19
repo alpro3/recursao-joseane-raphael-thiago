@@ -111,7 +111,7 @@ public class MyMath2 {
      * @return soma dos inteiros do ArrayList
      */
     public static int somatorioArrayList(ArrayList<Integer> list){
-        return somatorioArrayList(list,0);
+        return somatorioArrayList(list, 0);
     }
 
     public static int somatorioArrayList(ArrayList<Integer> list, int pos) {
@@ -140,6 +140,45 @@ public class MyMath2 {
             n = list.get(pos);
         }
         return findBiggest(list, n, pos+1);
+    }
+
+    /**
+     * Implemente um método recursivo para determinar
+     * se um string ocorre dentro de outro.
+     * @param str
+     * @param match
+     * @return
+     */
+    boolean findSubStr(String str, String match){
+        if(match.length()<str.length()){
+            return false;
+        }
+        String aux = str.substring(0,match.length());
+        if(aux.equals(match)){
+            return true;
+        }
+        return findSubStr(str.substring(1,str.length()), match);
+    }
+
+    /**
+     * Faça um método recursivo que determina
+     * o número de dígitos de um inteiro.
+     * @param n
+     * @return
+     */
+    int nroDigit(int n){
+
+    }
+
+    /**
+     * Implemente um métodos que recebe um String e retorna
+     * um ArrayList com todas as permutações deste String.
+     * Ex.: cão -> [cão, coã, ãoc, ãco, oãc, oãc]
+     * @param s
+     * @return
+     */
+    public ArrayList<String> permutations(String s){
+
     }
 
 }
