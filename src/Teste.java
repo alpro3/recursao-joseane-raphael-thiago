@@ -5,7 +5,7 @@ public class Teste {
     public static void main(String[] args) {
 
         System.out.println(MyMath.fatorial(3));
-        System.out.println(MyMath2.fatorial(3));
+        System.out.println(MyMath2.fatorial(100));
         System.out.println(MyMath.somatorio(-4));
         System.out.println(MyMath2.somatorio(-4));
         System.out.println(MyMath.fibonacci(17));
@@ -26,6 +26,8 @@ public class Teste {
         System.out.println(MyMath2.findBiggest(list));
 
         System.out.println(MyMath2.convBase2(10));
+
+        System.out.println(MyMath2.nroDigit(0));
 
     }
 

@@ -139,7 +139,7 @@ public class MyMath2 {
         if(list.get(pos) > n){
             n = list.get(pos);
         }
-        return findBiggest(list, n, pos+1);
+        return findBiggest(list, n, pos + 1);
     }
 
     /**
@@ -149,15 +149,15 @@ public class MyMath2 {
      * @param match
      * @return
      */
-    boolean findSubStr(String str, String match){
-        if(match.length()<str.length()){
+    public boolean findSubStr(String match, String str){
+        if(match.length() < str.length()){
             return false;
         }
-        String aux = str.substring(0,match.length());
-        if(aux.equals(match)){
+        String aux = match.substring(0, str.length());
+        if(aux.equals(str)){
             return true;
         }
-        return findSubStr(str.substring(1,str.length()), match);
+        return findSubStr(match.substring(1, match.length()), str);
     }
 
     /**
@@ -166,8 +166,14 @@ public class MyMath2 {
      * @param n
      * @return
      */
-    int nroDigit(int n){
-
+    public static int nroDigit(int n) {
+        if(n == 0) {
+            return 1;
+        } else if (n == 1) {
+            return 1;
+        } else {
+            return 1 + nroDigit(n / 10);
+        }
     }
 
     /**
@@ -177,8 +183,8 @@ public class MyMath2 {
      * @param s
      * @return
      */
-    public ArrayList<String> permutations(String s){
-
-    }
+//    public ArrayList<String> permutations(String s){
+//
+//    }
 
 }
