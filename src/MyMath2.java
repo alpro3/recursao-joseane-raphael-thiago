@@ -172,7 +172,7 @@ public class MyMath2 {
         } else if (n == 1) {
             return 1;
         } else {
-            return 1 + nroDigit(n / 10);
+            return 1 + nroDigit(n/10);
         }
     }
 
@@ -183,7 +183,7 @@ public class MyMath2 {
      * @param s
      * @return
      */
-//    public ArrayList<String> permutations(String s){
+//    public static ArrayList<String> permutations(String s){
 //
 //    }
 
