@@ -167,6 +167,9 @@ public class MyMath2 {
      * @return
      */
     public static int nroDigit(int n) {
+        if(n<0){
+            n = n*-1;
+        }
         if(n == 0) {
             return 1;
         } else if (n == 1) {
