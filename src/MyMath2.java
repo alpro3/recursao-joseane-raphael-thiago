@@ -186,8 +186,10 @@ public class MyMath2 {
      * @param s
      * @return
      */
-//    public static ArrayList<String> permutations(String s){
-//
-//    }
+    public static ArrayList<String> permutations(String s) {
+        ArrayList<String> palavras = new ArrayList<String>();
+        permutations(palavras, str, 0);
+        return palavras;
+    }
 
 }
