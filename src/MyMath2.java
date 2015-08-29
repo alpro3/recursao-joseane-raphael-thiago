@@ -183,14 +183,30 @@ public class MyMath2 {
      * Implemente um métodos que recebe um String e retorna
      * um ArrayList com todas as permutações deste String.
      * Ex.: cão -> [cão, coã, ãoc, ãco, oãc, oãc]
-     * @param s
      * @return
      */
-    public static ArrayList<String> permutations(String s) {
-        ArrayList<String> palavras = new ArrayList<String>();
-        permutations(palavras, str, 0);
-        return palavras;
+    public static void permutacao(ArrayList<String>palavras, String str, int i){
+        int j, comprimento;
+        comprimento = str.length();
+        if (i == comprimento) {
+            palavras.add(str);		}
+        else {
+            for (j = i; j < comprimento; j++) {
+                char tmp;
+                int p1=i, p2=j;
+                tmp = str.charAt(p1);
+                StringBuffer sb = new StringBuffer(str);
+                sb.setCharAt(p1, str.charAt(p2));
+                sb.setCharAt(p2, tmp);
+                str = sb.toString();
+                permutacao(palavras, str, i+1);
+            }
+        }
     }
 
-
+    public static ArrayList<String> permutacao(String str){
+        ArrayList<String> palavras = new ArrayList<String>();
+        permutacao(palavras, str, 0);
+        return palavras;
+    }
 }
