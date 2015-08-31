@@ -209,4 +209,26 @@ public class MyMath2 {
         permutacao(palavras, str, 0);
         return palavras;
     }
+
+    public static String espelhaPalavra(String palavra, int i, int j){
+        if(i==j || j<i)return palavra;
+        String palavraAUX;
+        char tmp = palavra.charAt(i);
+        StringBuffer sb = new StringBuffer(palavra);
+        sb.setCharAt(i, palavra.charAt(j));
+        sb.setCharAt(j, tmp);
+        palavraAUX = sb.toString();
+        return espelhaPalavra(palavraAUX, i+1, j-1);
+    }
+
+    public static String espelhaPalavra(String palavra){
+        return espelhaPalavra(palavra, 0, palavra.length()-1);
+    }
+
+    public static String espelha(String palavra) {
+        if ((palavra == null) || (palavra.length() <= 1)) {
+            return palavra;
+        }
+        return espelha(palavra.substring(1)) + palavra.charAt(0);
+    }
 }
