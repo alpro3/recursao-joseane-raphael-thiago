@@ -231,4 +231,18 @@ public class MyMath2 {
         }
         return espelha(palavra.substring(1)) + palavra.charAt(0);
     }
+
+    public static ArrayList<String> substringGenerator(String palavra) {
+        if(palavra.length()==0 || palavra==null)throw new NullPointerException();
+        ArrayList<String> lista = new ArrayList<String>();
+        if(palavra.length()==1){
+            lista.add(palavra);
+            return lista;
+        }
+        for (int i = 1; i <= palavra.length(); i++) {
+            lista.add(palavra.substring(0,i));
+        }
+        lista.addAll(substringGenerator(palavra.substring(1,palavra.length())));
+        return lista;
+    }
 }
